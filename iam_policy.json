@@ -1,0 +1,21 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowReadFromInputBucket",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": "arn:aws:s3:::[your-unique-name]-input-files/*"
+        },
+        {
+            "Sid": "AllowWriteToOutputBucket",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject"
+            ],
+            "Resource": "arn:aws:s3:::[your-unique-name]-output-analysis/*"
+        }
+    ]
+}
